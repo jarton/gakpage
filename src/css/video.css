@@ -1,0 +1,12 @@
+.video-col {
+		margin-bottom: 30px;
+}
+
+.vidThumb {
+		width: 100%;
+		height: auto;
+}
+
+.caption > h3 {
+		text-align: center;
+}
