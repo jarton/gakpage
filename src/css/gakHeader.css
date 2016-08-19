@@ -22,8 +22,8 @@ header {
 .header-text {
 		margin-top: 60px;
 		margin-bottom: -20px;
+		font-size: 3.6vmax;
 		text-transform: uppercase;
-		font-size: 62px;
     font-weight: bold;
     text-align: center;
 }
@@ -69,7 +69,7 @@ li a.active {
 }
 
 .navbar-default .navbar-nav>li>a {
-    font-size: 20px;
+    font-size: 18px;
     color: #737373;
     text-transform: uppercase;
     transition: all .7s ease 0s;
@@ -83,6 +83,8 @@ li a.active {
 
 .navbar-default .navbar-nav>li>a:hover {
     color: #42b3e5;
+		cursor: pointer;
+		cursor: hand;
 }
 
 .hrline {

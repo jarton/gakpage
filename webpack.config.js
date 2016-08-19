@@ -1,3 +1,4 @@
+var webpack = require('webpack')
 module.exports = {
 	entry: './src',
 	output: {
@@ -5,8 +6,19 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 
+	plugins: [
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery"
+		})	
+	],
+
 	module: {
 		loaders: [
+			{
+				test: require.resolve("jquery"),
+				loader: "imports?jQuery=jquery"
+			},
 			{
 				test: /\.js/,
 				loader: 'babel',

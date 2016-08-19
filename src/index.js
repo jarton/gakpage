@@ -1,5 +1,12 @@
 import $ from 'jquery'
+import jQuery from 'jquery'
+
+window.$ = $
+window.jQuery = jQuery
+global.jQuery = jQuery
+
 import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import bootstrapjs from '../node_modules/bootstrap/dist/js/bootstrap.min.js'
 import headerStyle from './css/gakHeader.css'
 import footerStyle from './css/gakFooter.css'
 import Mustache from 'mustache'
@@ -11,12 +18,22 @@ import videoTemplate from './html/videos.html'
 import infoTemplate from './html/info.html'
 import contactTemplate from './html/contact.html'
 
+
 $(document).ready(() => { 
 	//add links for navbar
 	
 clickLink(homeTemplate).done(() => {
 	home.loadNews()
 })
+
+	$('#nav-logo').click((event) => {
+		event.preventDefault();
+		$('.active').removeClass();
+		$('#nav-home').addClass('active');
+		clickLink(homeTemplate).done(() => {
+			home.loadNews()
+		})
+	})
 
 	$('#nav-home').click((event) => {
 		event.preventDefault();
