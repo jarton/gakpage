@@ -13,8 +13,8 @@ export default {
 					return "<p>" + render(text) + "</p>"
 				}
 			}
-			story.text = story.text.replace(/(?:\r\n|\r|\n)/g, '<br />');
 			$('#storyArea').append(Mustache.render(storyTemplate, story))
+			$('#'+ story.id).load(story.html)
 		})
 	}
 }
